@@ -1,0 +1,19 @@
+:root { --bg: #0d0b1e; --card: #16132e; --ink: #f6ead2; --muted: #b9ad98; --gold: #e8c77a; --saffron: #f2a93b; }
+* { box-sizing: border-box; }
+body { margin: 0; background: radial-gradient(ellipse at 50% 0%, #2a1d4a 0%, var(--bg) 60%) fixed; background-color: var(--bg);
+  color: var(--ink); font: 17px/1.65 Georgia, "Times New Roman", serif; }
+main { max-width: 680px; margin: 0 auto; padding: 64px 20px 48px; }
+.eyebrow { text-transform: uppercase; letter-spacing: .22em; font: 12px system-ui, sans-serif; color: var(--gold); margin: 0; }
+.eyebrow a { color: inherit; text-decoration: none; }
+h1 { font-size: clamp(36px, 8vw, 54px); line-height: 1.1; margin: 8px 0 16px; letter-spacing: .02em; }
+h2 { font-size: 20px; color: var(--gold); margin: 40px 0 8px; font-weight: 400; letter-spacing: .04em; }
+.lede { font-size: 19px; color: var(--muted); margin: 0; }
+a { color: var(--saffron); }
+code { font-size: 14px; color: var(--gold); }
+.channels { list-style: none; padding: 0; margin: 0; }
+.channels li { display: flex; flex-wrap: wrap; gap: 4px 16px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid #2c2650; }
+.channels a { color: var(--ink); text-decoration: none; font-size: 19px; }
+.channels a:hover { color: var(--saffron); }
+.channels i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 10px; }
+.channels span { color: var(--muted); font: 14px system-ui, sans-serif; }
+footer { margin-top: 56px; padding-top: 16px; border-top: 1px solid #2c2650; color: var(--muted); font: 14px system-ui, sans-serif; }

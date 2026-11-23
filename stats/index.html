@@ -1,0 +1,18 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="referrer" content="no-referrer"><title>Private</title>
+<style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#120f24;color:#e9dfc8;font:16px/1.5 system-ui,sans-serif;text-align:center;padding:16px}</style>
+</head><body><p id="m">This page is private.</p>
+<script>
+(async () => {
+  const k = location.hash.slice(1);
+  if (!k) return;
+  try {
+    const b64 = s => Uint8Array.from(atob(s.replace(/-/g, '+').replace(/_/g, '/')), c => c.charCodeAt(0));
+    const key = await crypto.subtle.importKey('raw', b64(k), 'AES-GCM', false, ['decrypt']);
+    const buf = new Uint8Array(await (await fetch('data.enc?t=' + Date.now(), { cache: 'no-store' })).arrayBuffer());
+    const html = new TextDecoder().decode(await crypto.subtle.decrypt({ name: 'AES-GCM', iv: buf.slice(0, 12) }, key, buf.slice(12)));
+    document.open(); document.write(html.replace('<head>', '<head><meta name="robots" content="noindex, nofollow, noarchive"><meta name="referrer" content="no-referrer">')); document.close();
+  } catch (e) { document.getElementById('m').textContent = 'This link is not valid.'; }
+})();
+</script></body></html>

@@ -190,7 +190,7 @@ section.alt { background: var(--night-2); border-top: 1px solid var(--line); bor
 .prose p:first-of-type::first-letter { font: 600 3.4em/0.8 var(--serif); float: left; margin: .08em .1em 0 0; color: var(--gold); }
 
 /* e-book picker / forms */
-.picker { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 0 0 26px; }
+.picker { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 0 0 26px; }
 .picker label { cursor: pointer; display: block; border-radius: 10px; padding: 8px; border: 1px solid var(--line); background: var(--card); text-align: center; transition: border-color .15s, transform .15s; }
 .picker input { position: absolute; opacity: 0; pointer-events: none; }
 .picker img { border-radius: 5px; margin-bottom: 10px; }

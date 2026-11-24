@@ -47,7 +47,7 @@
   // e-book picker preselect (?l=seville) and thank-you page download
   const q = new URLSearchParams(location.search).get('l');
   if (q) { const r = document.querySelector(`input[name=lantern][value="${q}"]`); if (r) r.checked = true; }
-  $$('[data-thanks]').forEach(el => { const a = el.querySelector(`[data-l="${q}"]`); if (a) el.prepend(a); });
+  $$('[data-thanks]').forEach(el => { const a = el.querySelector(`[data-l="${q}"]`); if (a) a.parentElement.prepend(a); });
   // with signup on, the thank-you links only show in the browser that just sent the form
   let sent = false; try { sent = !!sessionStorage.getItem('sl-signed-up'); } catch {}
   $$('[data-thanks][hidden]').forEach(el => { if (sent) el.hidden = false; else $$('[data-thanks-none]').forEach(n => n.hidden = false); });

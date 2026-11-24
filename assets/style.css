@@ -213,8 +213,8 @@ section.alt { background: var(--night-2); border-top: 1px solid var(--line); bor
 .consent input { margin-top: 3px; width: 18px; height: 18px; accent-color: var(--gold); flex: none; }
 .form-msg { margin: 12px 0 0; font-size: 14px; min-height: 1em; }
 .form-msg.err { color: #ff9a8a; }
-.inline-signup { display: flex; gap: 10px; flex-wrap: wrap; max-width: 520px; margin: 26px auto 0; }
-.inline-signup input[type=email] { flex: 1 1 240px; font: 16px var(--sans); color: var(--ink); background: var(--night); border: 1px solid var(--line-2); border-radius: 999px; padding: 13px 20px; }
+.inline-signup { display: flex; gap: 10px; flex-wrap: wrap; max-width: 680px; margin: 26px auto 0; }
+.inline-signup input[type=email], .inline-signup input[type=text] { flex: 1 1 180px; min-width: 0; font: 16px var(--sans); color: var(--ink); background: var(--night); border: 1px solid var(--line-2); border-radius: 999px; padding: 13px 20px; }
 .downloads { display: grid; gap: 12px; }
 .downloads a { display: flex; align-items: center; gap: 16px; padding: 12px; border-radius: 12px; border: 1px solid var(--line); background: var(--night); color: var(--ink); text-decoration: none; }
 .downloads a:hover { border-color: var(--gold); color: var(--ink); }

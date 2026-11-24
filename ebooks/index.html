@@ -21,7 +21,7 @@
 <link rel="preload" href="/assets/fonts/cormorant-infant-600-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/style.css">
 <script type="application/ld+json">[{"@context":"https://schema.org","@type":"Book","name":"Seven Nights in Shiraz","description":"A gentle week-long sleep ritual with Persian ambient music","bookFormat":"https://schema.org/EBook","numberOfPages":14,"inLanguage":"en","isAccessibleForFree":true,"publisher":{"@type":"Organization","name":"Seven Lanterns"},"offers":{"@type":"Offer","price":0,"priceCurrency":"EUR"}},{"@context":"https://schema.org","@type":"Book","name":"Seven Nights in Yerevan","description":"A gentle week-long sleep ritual with Armenian duduk music","bookFormat":"https://schema.org/EBook","numberOfPages":14,"inLanguage":"en","isAccessibleForFree":true,"publisher":{"@type":"Organization","name":"Seven Lanterns"},"offers":{"@type":"Offer","price":0,"priceCurrency":"EUR"}},{"@context":"https://schema.org","@type":"Book","name":"Seven Nights in Seville","description":"A gentle week-long sleep ritual with slow flamenco guitar","bookFormat":"https://schema.org/EBook","numberOfPages":14,"inLanguage":"en","isAccessibleForFree":true,"publisher":{"@type":"Organization","name":"Seven Lanterns"},"offers":{"@type":"Offer","price":0,"priceCurrency":"EUR"}},{"@context":"https://schema.org","@type":"Book","name":"Seven Nights in Kyoto","description":"A gentle week-long sleep ritual with Japanese zen music","bookFormat":"https://schema.org/EBook","numberOfPages":14,"inLanguage":"en","isAccessibleForFree":true,"publisher":{"@type":"Organization","name":"Seven Lanterns"},"offers":{"@type":"Offer","price":0,"priceCurrency":"EUR"}},{"@context":"https://schema.org","@type":"Book","name":"Seven Nights in Paris","description":"A gentle week-long sleep ritual with soft café jazz","bookFormat":"https://schema.org/EBook","numberOfPages":14,"inLanguage":"en","isAccessibleForFree":true,"publisher":{"@type":"Organization","name":"Seven Lanterns"},"offers":{"@type":"Offer","price":0,"priceCurrency":"EUR"}},{"@context":"https://schema.org","@type":"Book","name":"Seven Nights in Galway","description":"A gentle week-long sleep ritual with Celtic harp music","bookFormat":"https://schema.org/EBook","numberOfPages":14,"inLanguage":"en","isAccessibleForFree":true,"publisher":{"@type":"Organization","name":"Seven Lanterns"},"offers":{"@type":"Offer","price":0,"priceCurrency":"EUR"}},{"@context":"https://schema.org","@type":"Book","name":"Seven Nights in Varanasi","description":"A gentle week-long sleep ritual with Indian raga music","bookFormat":"https://schema.org/EBook","numberOfPages":14,"inLanguage":"en","isAccessibleForFree":true,"publisher":{"@type":"Organization","name":"Seven Lanterns"},"offers":{"@type":"Offer","price":0,"priceCurrency":"EUR"}}]</script>
-<script>window.SL={"email":"info@sevenlanternsmusic.com","signup":{"provider":"none"}}</script>
+<script>window.SL={"email":"info@sevenlanternsmusic.com","signup":{"provider":"mailerlite","mailerliteAccount":"2821297","mailerliteForm":"205030196454098659"}}</script>
 <script src="/assets/site.js" defer></script>
 </head>
 <body>
@@ -62,21 +62,14 @@
   <div class="card-form" id="get">
     <h3 style="margin-bottom:6px">Choose your city</h3>
     <p class="muted small">Same practices, a different place and different music.</p>
-    <div style="margin-top:18px"><div class="downloads"><a href="/downloads/seven-nights-in-shiraz.pdf" download data-l="shiraz">
-    <img src="/assets/img/ebook-shiraz.jpg" alt="" width="52" height="74" loading="lazy">
-    <div><b>Seven Nights in Shiraz</b><span>Persian ambient · PDF, 14 pages</span></div><em>Download ↓</em></a><a href="/downloads/seven-nights-in-yerevan.pdf" download data-l="yerevan">
-    <img src="/assets/img/ebook-yerevan.jpg" alt="" width="52" height="74" loading="lazy">
-    <div><b>Seven Nights in Yerevan</b><span>Armenian duduk · PDF, 14 pages</span></div><em>Download ↓</em></a><a href="/downloads/seven-nights-in-seville.pdf" download data-l="seville">
-    <img src="/assets/img/ebook-seville.jpg" alt="" width="52" height="74" loading="lazy">
-    <div><b>Seven Nights in Seville</b><span>flamenco guitar · PDF, 14 pages</span></div><em>Download ↓</em></a><a href="/downloads/seven-nights-in-kyoto.pdf" download data-l="kyoto">
-    <img src="/assets/img/ebook-kyoto.jpg" alt="" width="52" height="74" loading="lazy">
-    <div><b>Seven Nights in Kyoto</b><span>Japanese zen · PDF, 14 pages</span></div><em>Download ↓</em></a><a href="/downloads/seven-nights-in-paris.pdf" download data-l="paris">
-    <img src="/assets/img/ebook-paris.jpg" alt="" width="52" height="74" loading="lazy">
-    <div><b>Seven Nights in Paris</b><span>café jazz · PDF, 14 pages</span></div><em>Download ↓</em></a><a href="/downloads/seven-nights-in-galway.pdf" download data-l="galway">
-    <img src="/assets/img/ebook-galway.jpg" alt="" width="52" height="74" loading="lazy">
-    <div><b>Seven Nights in Galway</b><span>Celtic harp · PDF, 14 pages</span></div><em>Download ↓</em></a><a href="/downloads/seven-nights-in-varanasi.pdf" download data-l="varanasi">
-    <img src="/assets/img/ebook-varanasi.jpg" alt="" width="52" height="74" loading="lazy">
-    <div><b>Seven Nights in Varanasi</b><span>Indian raga · PDF, 14 pages</span></div><em>Download ↓</em></a></div></div><p class="muted small" style="margin:16px 0 0">Free to share with friends, unchanged. Please don't sell it.</p>
+    <form data-signup novalidate>
+      <div class="picker" role="radiogroup" aria-label="Choose your guide"><input type="radio" name="lantern" id="pick-shiraz" value="shiraz" checked><label for="pick-shiraz"><img src="/assets/img/ebook-shiraz.jpg" alt="" width="672" height="953"><span>Shiraz</span><small>Persian ambient</small></label><input type="radio" name="lantern" id="pick-yerevan" value="yerevan"><label for="pick-yerevan"><img src="/assets/img/ebook-yerevan.jpg" alt="" width="672" height="953"><span>Yerevan</span><small>Armenian duduk</small></label><input type="radio" name="lantern" id="pick-seville" value="seville"><label for="pick-seville"><img src="/assets/img/ebook-seville.jpg" alt="" width="672" height="953"><span>Seville</span><small>flamenco guitar</small></label><input type="radio" name="lantern" id="pick-kyoto" value="kyoto"><label for="pick-kyoto"><img src="/assets/img/ebook-kyoto.jpg" alt="" width="672" height="953"><span>Kyoto</span><small>Japanese zen</small></label><input type="radio" name="lantern" id="pick-paris" value="paris"><label for="pick-paris"><img src="/assets/img/ebook-paris.jpg" alt="" width="672" height="953"><span>Paris</span><small>café jazz</small></label><input type="radio" name="lantern" id="pick-galway" value="galway"><label for="pick-galway"><img src="/assets/img/ebook-galway.jpg" alt="" width="672" height="953"><span>Galway</span><small>Celtic harp</small></label><input type="radio" name="lantern" id="pick-varanasi" value="varanasi"><label for="pick-varanasi"><img src="/assets/img/ebook-varanasi.jpg" alt="" width="672" height="953"><span>Varanasi</span><small>Indian raga</small></label></div>
+      <div class="field"><label for="fname">First name</label><input id="fname" type="text" name="name" placeholder="First name" autocomplete="given-name" required></div>
+      <div class="field"><label for="email">Your email</label><input id="email" type="email" name="email" placeholder="you@example.com" autocomplete="email" required></div>
+      <label class="consent"><input type="checkbox" name="consent" required> <span>Yes, email me the guide and the Lantern Letter (new mixes and lanterns, about once a month). Unsubscribe any time. See the <a href="/privacy/">privacy policy</a>.</span></label>
+      <button class="btn btn-gold" type="submit" style="width:100%">Send me my free guide</button>
+      <p class="form-msg" role="status"></p>
+    </form>
   </div>
 </div></section>
 
@@ -97,7 +90,7 @@
 
 <section class="block"><div class="wrap narrow faq">
   <div class="section-head center"><p class="eyebrow">Questions</p><h2>Good to know</h2><div class="rule"></div></div>
-  <details><summary>Is it really free?</summary><p>Yes. Download it and keep it. No account, no email needed.</p></details>
+  <details><summary>Is it really free?</summary><p>Yes. You leave your email, we send the guide, and now and then a short letter when a new mix is out. One click unsubscribes you.</p></details>
   <details><summary>Do I need the music?</summary><p>It helps, but no. Every night names a one-hour mix that is free to play on YouTube. Start the music, lower the volume, then do the practice.</p></details>
   <details><summary>Which city should I choose?</summary><p>Pick the sound you like best: Persian ambient (Shiraz), Armenian duduk (Yerevan), flamenco guitar (Seville), Japanese zen (Kyoto), café jazz (Paris), Celtic harp (Galway) or Indian raga (Varanasi). The practices are the same in every guide.</p></details>
   <details><summary>Is this medical advice?</summary><p>No. The guide is for relaxation and winding down. If you have ongoing trouble sleeping, please talk to a doctor or another health professional.</p></details>

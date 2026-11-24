@@ -48,6 +48,9 @@
   const q = new URLSearchParams(location.search).get('l');
   if (q) { const r = document.querySelector(`input[name=lantern][value="${q}"]`); if (r) r.checked = true; }
   $$('[data-thanks]').forEach(el => { const a = el.querySelector(`[data-l="${q}"]`); if (a) el.prepend(a); });
+  // with signup on, the thank-you links only show in the browser that just sent the form
+  let sent = false; try { sent = !!sessionStorage.getItem('sl-signed-up'); } catch {}
+  $$('[data-thanks][hidden]').forEach(el => { if (sent) el.hidden = false; else $$('[data-thanks-none]').forEach(n => n.hidden = false); });
 
   // signup (MailerLite) — only active when configured
   $$('form[data-signup]').forEach(f => {
@@ -55,6 +58,8 @@
     f.addEventListener('submit', async e => {
       e.preventDefault();
       const email = f.querySelector('input[type=email]').value.trim();
+      const nameEl = f.querySelector('input[name=name]'), name = nameEl ? nameEl.value.trim() : '';
+      if (nameEl && !name) { msg.className = 'form-msg err'; msg.textContent = 'Please enter your first name.'; return; }
       const consent = f.querySelector('input[name=consent]');
       const lantern = (f.querySelector('input[name=lantern]:checked') || {}).value || f.dataset.lantern || '';
       if (!/^\S+@\S+\.\S+$/.test(email)) { msg.className = 'form-msg err'; msg.textContent = 'Please enter a valid email address.'; return; }
@@ -63,6 +68,7 @@
       if (s.provider !== 'mailerlite') { location.href = '/thank-you/?l=' + lantern; return; }
       const body = new FormData();
       body.append('fields[email]', email);
+      if (name) body.append('fields[name]', name);
       if (lantern) body.append('fields[lantern]', lantern);
       body.append('ml-submit', '1'); body.append('anticsrf', 'true');
       msg.className = 'form-msg'; msg.textContent = 'Sending…';
@@ -70,6 +76,7 @@
         const r = await fetch(`https://assets.mailerlite.com/jsonp/${s.mailerliteAccount}/forms/${s.mailerliteForm}/subscribe`, { method: 'POST', body });
         const j = await r.json();
         if (!j.success) throw new Error();
+        try { sessionStorage.setItem('sl-signed-up', '1'); } catch {}
         location.href = '/thank-you/?l=' + lantern;
       } catch {
         msg.className = 'form-msg err';

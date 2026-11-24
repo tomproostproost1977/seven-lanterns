@@ -106,6 +106,8 @@ section.alt { background: var(--night-2); border-top: 1px solid var(--line); bor
 
 /* lantern cards */
 .lanterns { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+/* a single card left over on the last row of three sits in the middle column */
+@media (min-width: 901px) { .lanterns:not([style]) > .lantern-card:last-child:nth-child(3n+1) { grid-column: 2; } }
 .lantern-card { position: relative; display: flex; flex-direction: column; border-radius: var(--radius); overflow: hidden; text-decoration: none; color: var(--ink);
   background: var(--card); border: 1px solid var(--line); transition: transform .2s, border-color .2s, box-shadow .2s; }
 .lantern-card:hover { transform: translateY(-3px); border-color: var(--c); box-shadow: 0 14px 40px -12px var(--c); color: var(--ink); }

@@ -1,5 +1,6 @@
 User-agent: *
 Disallow: /guides-d60587cc0622/
 Disallow: /thank-you/
+Disallow: /confirmed/
 
 Sitemap: https://sevenlanternsmusic.com/sitemap.xml
